@@ -1,0 +1,105 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+
+
+
+
+.root {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+	background-color: #ffe9d1;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 30px 30px 0;
+}
+
+.socail_icon {
+	width: 40px;
+	height: 40px;
+	margin: 0 15px 0 0;
+}
+
+.nav__link {
+	margin: 0 20px;
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.nav__link:first-child {
+	margin: 0 20px 0 0;
+}
+
+.nav__link:last-child {
+	margin: 0 0 0 20px;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	padding: 0 30px 0;
+}
+
+.main__container {
+	margin: auto 0;
+}
+
+.main__title {
+	font-family: 'Playfair Display', serif;
+	font-size: 55px;
+	font-weight: 900;
+	text-align: center;
+}
+
+.main__subtitle {
+	font-family: 'Playfair Display', serif;
+	font-size: 35px;
+	font-weight: 300;
+	text-align: center;
+}
+
+.main__text {
+	font-family: 'Playfair Display', serif;
+	font-size: 35px;
+	font-weight: 300;
+	text-align: center;
+}
+
+.main__photo-container {
+	display: flex;
+	justify-content: center;
+	margin: 50px 0;
+	flex-wrap: wrap;
+}
+
+.main__photo {
+	width: 20%;
+	object-fit: cover;
+	margin: 20px 20px;
+}
