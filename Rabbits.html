@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChebNadya</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="root">
+	<header class="header">
+				
+		<nav class="nav">
+			<a class="nav__link" href="index.html">Главная</a>
+		</nav>
+	</header>
+	
+	<main class="content">
+		<div class="main__container">
+			<h1 class="main__title">Rabbits </h1>
+			<div class="main__photo-container">
+				<img class="main__photo" src="images/Rabbits.jpg">
+				<img class="main__photo" src="images/Rabbits1.jpg">
+			</div>
+			<p class="main__text">Code:</p>
+<pre class="main__textcode">
+using System;
+
+class ARabbits
+{
+Rabbit[] data;
+	public ARabbits()
+	{
+		data = new Rabbit[13];
+	}
+	public Rabbit this[int index]
+	{
+		get
+		{
+			return data[index];
+		}
+		set
+		{
+			data[index] = value;
+		}
+	}
+	
+}
+
+class Rabbit 
+{
+	override public int GetHashCode()
+	{
+		return (this.GetType()).GetHashCode();	
+	}
+	override public bool Equals(object o)
+	{
+		bool b = o is Rabbit;
+		return b;	
+	}
+}
+public class Program
+{
+	public static void Main()
+	{
+		Rabbit a = new Rabbit();
+		Rabbit b = new Rabbit();
+		Console.WriteLine("a="+a.GetHashCode()+ " b="+b.GetHashCode());
+		Console.WriteLine(a.Equals(b));
+		ARabbits rs= new ARabbits();
+		rs[0]=a;
+		rs[1]=b;
+		for (int i=0; i<2; i++)
+		{
+			Console.WriteLine(rs[i].GetHashCode());	
+		}
+	}
+}
+
+</pre>
+<img class="main__photo" src="images/CodeRabbits.png">
+			
+		
+		</div>
+	</main>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChebNadya</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="root">
+	<header class="header">
+				
+		<nav class="nav">
+			<a class="nav__link" href="index.html">Главная</a>
+		</nav>
+	</header>
+	
+	<main class="content">
+		<div class="main__container">
+			<h1 class="main__title"> Logarithm </h1>
+			<p class="main__text"></p>
+		
+		</div>
+		
+		
+		<form id="form1" runat ="server">
+			<div>
+				lg(<asp:TextBox ID ="TextBox_X" runat ="server" Width="32px">1000</asp:TextBox>)
+				<asp:TextBox ID ="ButtonLOG" runat ="server" Text="=" onclick="ButtonLOG_Click"/>
+				<asp:Label ID ="LabelResult" runat ="server" Text="Label"> </asp:Label>
+			</div>
+		</form>
+		
+</main>
+	
+	
+<script runat ="server">
+	protected void ButtonLOG_Click(objectsender, EventArgs e)
+	{
+		var X= int.Parse(TextBox_X.Text);
+		labelResult.Text = System.Math.Log10(X).ToString();
+	}
+</script>
+
+</body>
+</html>
